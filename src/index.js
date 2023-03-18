@@ -2,33 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Home from './pages/home'
-import About from './pages/about'
-import Social from './pages/social'
-import EventDetails from './pages/eventdetails'
-import Contact from './pages/contact'
-import NotFound from './pages/notfound'
-import Layout from './pages/layout'
+// import {motion} from 'framer-motion'
+// import Home from './pages/home'
+// import About from './pages/about'
+// import Social from './pages/social'
+// import EventDetails from './pages/eventdetails'
+// import Contact from './pages/contact'
+// import NotFound from './pages/notfound'
+// import Layout from './pages/layout'
 import {
     BrowserRouter,
-    Routes,
-    Route,
+    
 } from 'react-router-dom'
+import AnimatedRoutes from './components/AnimatedRoutes';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  
   <React.StrictMode>
     <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<Layout />}>
-                <Route index element={<Home />}></Route>
-                <Route path="about" element={<About />}></Route>
-                <Route path="eventdetails" element={<EventDetails />}></Route>
-                <Route path="contact" element={<Contact />}></Route>
-                <Route path="social" element={<Social />}></Route>
-                <Route path="*" element={<NotFound />}></Route>
-            </Route>
-        </Routes>
+        <AnimatedRoutes/>
     </BrowserRouter>
   </React.StrictMode>
 );
